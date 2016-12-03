@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app='Demo'>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <link rel="stylesheet" type="text/css" href="recordQue.css">
+</head>
+<body ng-controller='main'>
+
+<table>
+  <tr ng-repeat="row in arrRows track by $index">
+    <td ng-repeat="col in row">
+      <table class="recordQue">
+        <tr>
+          <td id="nw" ng-class="col.nw"></td>
+          <td id="ne" ng-class="col.ne"></td>
+        </tr><tr>
+          <td id="sw" ng-class="col.sw"></td>
+          <td id="se" ng-class="col.se"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<br/><br/>
+  <div layout="row" layout-align="left center">
+    <table class="recordQue">
+      <tr>
+        <td id="nw" class="leaf white"></td>
+        <td id="ne" class="drop cutout white"></td>
+      </tr><tr>
+        <td id="sw" class="leaf white"></td>
+        <td id="se" class="leaf white"></td>
+      </tr>
+    </table>
+    <div class="logo">
+      Ohm.ai
+    </div>
+  </div>
+<br/><br/>
+<div layout="row" layout-align="left center">
+    <table class="recordQue">
+      <tr>
+        <td id="nw" class="leaf white"></td>
+        <td id="ne" class="drop cutout white"></td>
+      </tr><tr>
+        <td id="sw" class="leaf white"></td>
+        <td id="se" class="leaf white"></td>
+      </tr>
+    </table>
+    <div class="label">
+      Anthony Aragues<br/>
+      aaragues@ohm.ai
+    </div>
+    
+  </div><br/><br/><br/><br/>
+  <div class="label" style="padding-left:30px;"> Analyst Notes </div>
+  
+
+</body>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <script src="./index.js"></script>
+</html>

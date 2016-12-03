@@ -1,0 +1,88 @@
+
+/*----=====|| COLORS ||====----*/
+      .tomatoe { background-color: #cc6666; } /* tomato */
+      .orange { background-color: #de935f; } /* orange */
+      .yellow { background-color: #f0c674; } /* yellow */
+      .green { background-color: #b5bd68; } /* green */
+      .teal { background-color: #8abeb7; } /* teal */
+      .blue { background-color: #81a2be; } /* blue */
+      .purple { background-color: #b294bb; } /* purple */
+      .red { background-color: #a3685a; } /* red */
+      .white{ background-color: #fff; }
+
+/*----=====|| DEFAULTS ||====----*/
+html, body{background-color: #1d1f21; height:100%; width:100%; margin:0;padding:0;}
+table.recordQue{display:inline;} 
+table.recordQue td{
+  margin:0;
+  padding:0;
+  border-color:#1d1f21;
+  border-style:solid;
+  border-width:0px;
+}
+table.recordQue tr{height:20px;}
+.recordQue .animate{
+  transition: all 2s;
+}
+
+/*----=====|| SHAPES ||====----*/    
+.recordQue .drop{
+  width:20px;
+  height:20px;
+  border-radius:100%;
+}
+
+.recordQue .leaf{
+  width:20px;
+  height:20px;
+  border-radius:100%;
+}
+.recordQue #nw.leaf{ border-top-left-radius:2px; }
+.recordQue #ne.leaf{ border-top-right-radius:2px; }
+.recordQue #sw.leaf{ border-bottom-left-radius:2px; }
+.recordQue #se.leaf{ border-bottom-right-radius:2px; }
+
+.recordQue .pie, .recordQue .square{ border-radius: 2px; }
+.recordQue #nw.pie{ border-top-left-radius:100%; }
+.recordQue #ne.pie{ border-top-right-radius:100%; }
+.recordQue #sw.pie{ border-bottom-left-radius:100%; }
+.recordQue #se.pie{ border-bottom-right-radius:100%; }
+
+/*----=====|| MODIFIERS ||====----*/
+.recordQue .cutout {
+  width: 10px;
+  height: 10px;
+  border-style:solid;
+  border-width:5px;
+  border-color:#1d1f21;
+}
+.recordQue .hollow {
+  width: 10px;
+  height: 10px;
+  border-style:solid;
+  border-width:5px;
+}
+
+/*----=====|| POINT TO THE CENTER ||====----*/
+.recordQue #nw{border-bottom-right-radius:0;}
+.recordQue #ne{border-bottom-left-radius:0;}
+.recordQue #sw{border-top-right-radius:0;}
+.recordQue #se{border-top-left-radius:0;}
+
+.logo{padding-left:10px; color:#fff; font-weight: bold; font-size: 30px; }
+.label{padding-left:10px; color:#fff; font-weight: bold; font-size: 20px; }
+
+/*
+
+<table class="recordQue">
+  <tr>
+    <td id="nw" class="leaf"></td>
+    <td id="ne" class="drop cutout"></td>
+  </tr>
+  <tr>
+    <td id="sw" class="leaf"></td>
+    <td id="se" class="leaf"></td>
+  </tr>
+</table>
+
+*/
