@@ -10,57 +10,13 @@
 
 <record-que d="{nw:'square hollow red',ne:'leaf solid blue',sw:'drop cutout green',se:'pie solid purple'}"></record-que>
 
-<!--
 <table>
   <tr ng-repeat="row in arrRows track by $index">
     <td ng-repeat="col in row">
-      <table class="recordQue">
-        <tr>
-          <td id="nw" ng-class="col.nw"></td>
-          <td id="ne" ng-class="col.ne"></td>
-        </tr><tr>
-          <td id="sw" ng-class="col.sw"></td>
-          <td id="se" ng-class="col.se"></td>
-        </tr>
-      </table>
+      <record-que d="col"></record-que>
     </td>
   </tr>
 </table>
-
-<br/><br/>
-  <div layout="row" layout-align="left center">
-    <table class="recordQue">
-      <tr>
-        <td id="nw" class="leaf white"></td>
-        <td id="ne" class="drop cutout white"></td>
-      </tr><tr>
-        <td id="sw" class="leaf white"></td>
-        <td id="se" class="leaf white"></td>
-      </tr>
-    </table>
-    <div class="logo">
-      Ohm.ai
-    </div>
-  </div>
-<br/><br/>
-<div layout="row" layout-align="left center">
-    <table class="recordQue">
-      <tr>
-        <td id="nw" class="leaf white"></td>
-        <td id="ne" class="drop cutout white"></td>
-      </tr><tr>
-        <td id="sw" class="leaf white"></td>
-        <td id="se" class="leaf white"></td>
-      </tr>
-    </table>
-    <div class="label">
-      Anthony Aragues<br/>
-      aaragues@ohm.ai
-    </div>
-    
-  </div><br/><br/><br/><br/>
-  <div class="label" style="padding-left:30px;"> Analyst Notes </div>
--->
 
 </body>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
