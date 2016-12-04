@@ -1,5 +1,5 @@
 //----====|| Angular App ||====----\\
-var app = angular.module('Demo', ['ngMaterial']).config(function($mdThemingProvider){ $mdThemingProvider.theme('default') });
+var app = angular.module('Demo', ['ngMaterial','ngRecordQue']).config(function($mdThemingProvider){ $mdThemingProvider.theme('default') });
 
 //----====|| Angular Controller ||====----\\
 app.controller('main',function($scope){
@@ -7,8 +7,6 @@ app.controller('main',function($scope){
 	var arrShapes=['pie','square','leaf','drop','null'];
 	var arrMods=['cutout','hollow','solid'];
 	$scope.arrColors=['red','tomatoe','orange','yellow','green','teal','blue','purple'];
-
-	
 
 	var fnRandomElement=function(arr){ return  arr[Math.floor(Math.random() * arr.length)]; };
 	var fnRandomClasses=function(){

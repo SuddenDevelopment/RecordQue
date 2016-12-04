@@ -61,7 +61,17 @@ table.recordQue tr{height:20px;}
   height: 10px;
   border-style:solid;
   border-width:5px;
+  background-color: #1d1f21;
 }
+.recordQue .hollow.tomatoe{ border-color: #cc6666; }
+.recordQue .hollow.orange{ border-color: #de935f; }
+.recordQue .hollow.yellow{ border-color: #f0c674; }
+.recordQue .hollow.green{ border-color: #b5bd68; }
+.recordQue .hollow.teal{ border-color: #8abeb7; }
+.recordQue .hollow.blue{ border-color: #81a2be; }
+.recordQue .hollow.purple{ border-color: #b294bb; }
+.recordQue .hollow.red{ border-color: #a3685a; }
+.recordQue .hollow.white{ border-color: #fff; }
 
 /*----=====|| POINT TO THE CENTER ||====----*/
 .recordQue #nw{border-bottom-right-radius:0;}
