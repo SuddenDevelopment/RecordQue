@@ -10,6 +10,10 @@
 
 <record-que d="{nw:'square hollow red',ne:'leaf solid blue',sw:'drop cutout green',se:'pie solid purple'}"></record-que>
 
+<div layout="row" layout-align="left center">
+  <record-que d="{nw:'leaf solid white',ne:'drop cutout white',sw:'leaf solid white',se:'leaf solid white'}"></record-que>
+  <div class="logo">Ohm.ai</div>
+</div>
 <table>
   <tr ng-repeat="row in arrRows track by $index">
     <td ng-repeat="col in row">
@@ -17,7 +21,13 @@
     </td>
   </tr>
 </table>
-
+<div layout="row" layout-align="left center">
+  <div class="label">Anthony Aragues<br/>aaragues@ohm.ai</div>
+  <record-que d="{nw:'drop hollow white',ne:'leaf cutout white',sw:'leaf cutout white',se:'leaf cutout white'}"></record-que>
+</div>
+<br/><br/><br/>
+<div layout="row" layout-align="center" class="label">Analyst Notes</div>
+<br/><br/><br/>
 </body>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>

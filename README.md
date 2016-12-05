@@ -7,9 +7,7 @@ a visual design language for borders to represent categories and values and redu
 
 <link rel="stylesheet" type="text/css" href="recordQue.css">
 
-<recordQue d="{nw:'shape mod color',ne:'shape mod color',sw:'shape mod color',se:'shape mod color'}">
-	element to decorate, otherwise use an icon
-</recordQue>
+<record-que d="{nw:'shape mod color',ne:'shape mod color',sw:'shape mod color',se:'shape mod color'}"></record-que>
 
 <script type="text/javascript" src="recordQue.js"></script>
 
