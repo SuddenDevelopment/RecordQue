@@ -509,7 +509,7 @@ var arrIcons = [
 					,ne:fnRandomClasses()
 					,sw:fnRandomClasses()
 					,se:fnRandomClasses()
-					,center:fnRandomElement(arrIcons)
+					,c:fnRandomElement(arrIcons)
 				}
 			);
 			arrColumn[ii].nw.push($scope.arrColors[ii]);
