@@ -24,7 +24,8 @@ div.recordQue tr{height:20px;}
 .recordQue .animate{
   transition: all 2s;
 }
-.centerIcon{position:relative; color:#fff; top:-32px; left:13px; background:rgba(0,0,0,0.6); border-radius:20px; box-shadow: 0 0 5px #000;}
+.centerIcon{position:relative;  color:#fff; top:-32px; background:rgba(0,0,0,0.6); border-radius:20px; box-shadow: 0 0 5px #000;}
+.iconContainer{width:44px;text-align:center;}
 /*----=====|| SHAPES ||====----*/    
 
 .recordQue .null{
