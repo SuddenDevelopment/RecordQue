@@ -12,20 +12,24 @@
 
 /*----=====|| DEFAULTS ||====----*/
 html, body{background-color: #1d1f21; height:100%; width:100%; margin:0;padding:0;}
-table.recordQue{display:inline;} 
-table.recordQue td{
+div.recordQue{height:44px;width:44px;overflow:hidden;} 
+div.recordQue td{
   margin:0;
   padding:0;
   border-color:#1d1f21;
   border-style:solid;
   border-width:0px;
 }
-table.recordQue tr{height:20px;}
+div.recordQue tr{height:20px;}
 .recordQue .animate{
   transition: all 2s;
 }
-
+.centerIcon{position:relative; color:#fff; top:-32px; left:13px; background:rgba(0,0,0,0.6); border-radius:20px; box-shadow: 0 0 5px #000;}
 /*----=====|| SHAPES ||====----*/    
+
+.recordQue .null{
+  width:20px;
+  height:20px;}
 .recordQue .drop{
   width:20px;
   height:20px;
@@ -56,6 +60,7 @@ table.recordQue tr{height:20px;}
   border-width:5px;
   border-color:#1d1f21;
 }
+
 .recordQue .hollow {
   width: 10px;
   height: 10px;
