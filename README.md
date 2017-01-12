@@ -47,5 +47,5 @@ Each of the shapes mods and colors have a class
 
 ## TODO
 
-1, add optional legend tat shows stats per quad + style
+1. add optional legend tat shows stats per quad + style
 1. allow it to show in the top right of an existing element
