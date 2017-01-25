@@ -5,7 +5,7 @@ angular.module("ngRecordQue", []).directive('recordQue',function(){
 		,replace: true
 		,transclude: false 
 		,scope:{ d:'=' }
-		,template: '<div class="recordQue"><table><tr><td id="nw" class="{{::d.nw}}"></td><td id="ne" class="{{::d.ne}}"></td></tr><tr><td id="sw" class="{{::d.sw}}"></td><td id="se" class="{{::d.se}}"></td></tr></table><div class="iconContainer"><i ng-if="d.center!==false" class="fa fa-lg centerIcon {{::d.c}}"></i></div></div>'
+		,template: '<div class="recordQue"><table><tr><td id="nw" class="{{d.nw}}"></td><td id="ne" class="{{d.ne}}"></td></tr><tr><td id="sw" class="{{d.sw}}"></td><td id="se" class="{{d.se}}"></td></tr></table><div class="iconContainer"><i ng-if="d.center!==false" class="fa fa-lg centerIcon {{d.c}}"></i></div></div>'
 		,controller:function($scope){
 			if(typeof $scope.d !== 'undefined'){
 				//add a little flexibility can define classes as space separated or an array, becasue arrays are often easier to work with
