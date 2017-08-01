@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html ng-app='Demo'>
+<html ng-app='featureGrid'>
 <head>
   <title></title>
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
   <link rel="stylesheet" href="./css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="./css/recordQue.css">
 </head>
-<body ng-controller='main'>
+<body ng-controller='featureGridController'>
 <br/><br/>
 <div layout="row">
 
   <!--====##|| SETTINGS ||##====-->
   <div>
     <!--====##|| EXISTING RULES ||##====-->
-        <div layout="row">  
+        <div layout="row">
           <div flex="20"> Quad </div>
           <div flex="20"> Path </div>
           <div flex="20"> Comparison </div>
@@ -83,15 +83,9 @@
           <div class="recordQue mini"><table><tr><td ng-click="tmp.shape='square solid'" id="{{tmp.region}}" class="square solid white"></td></tr></table></div>
           <br/>
           <!--====##|| Color ||##====-->
-          <div class="recordQue mini"><table><tr><td ng-click="tmp.color='tomatoe'" id="{{tmp.region}}" class="{{tmp.shape}} tomatoe"></td></tr></table></div>
-          <div class="recordQue mini"><table><tr><td ng-click="tmp.color='orange'" id="{{tmp.region}}" class="{{tmp.shape}} orange"></td></tr></table></div>
-          <div class="recordQue mini"><table><tr><td ng-click="tmp.color='yellow'" id="{{tmp.region}}" class="{{tmp.shape}} yellow"></td></tr></table></div>
-          <div class="recordQue mini"><table><tr><td ng-click="tmp.color='green'" id="{{tmp.region}}" class="{{tmp.shape}} green"></td></tr></table></div>
-          <div class="recordQue mini"><table><tr><td ng-click="tmp.color='teal'" id="{{tmp.region}}" class="{{tmp.shape}} teal"></td></tr></table></div>
-          <div class="recordQue mini"><table><tr><td ng-click="tmp.color='blue'" id="{{tmp.region}}" class="{{tmp.shape}} blue"></td></tr></table></div>
-          <div class="recordQue mini"><table><tr><td ng-click="tmp.color='purple'" id="{{tmp.region}}" class="{{tmp.shape}} purple"></td></tr></table></div>
-          <div class="recordQue mini"><table><tr><td ng-click="tmp.color='red'" id="{{tmp.region}}" class="{{tmp.shape}} red"></td></tr></table></div>
-          <div class="recordQue mini"><table><tr><td ng-click="tmp.color='white'" id="{{tmp.region}}" class="{{tmp.shape}} white"></td></tr></table></div>
+          <div ng-repeat="color in arrColors track by $index" class="recordQue mini">
+            <table><tr><td ng-click="tmp.color=color" id="{{tmp.region}}" class="{{tmp.shape}}" ng-class="color"></td></tr></table>
+          </div>
       </div>
       <div ng-if="tmp.region==='c'">
           <!--====##|| Icon ||##====-->
@@ -129,4 +123,6 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
   <script src="recordQue.js"></script>
   <script src="./index.js"></script>
+  <script src="./src/constants/feature-grid-constant.js"></script>
+  <script src="./src/controllers/feature-grid-controller.js"></script>
 </html>
