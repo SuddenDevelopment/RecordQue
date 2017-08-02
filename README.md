@@ -1,4 +1,18 @@
-This Demo consist of 2 reusable components:
+This Demo consist of 2 reusable components
+
+Setup
+
+```
+
+npm install -g http-server
+
+http-server /COMPLETE_PATH
+Eg: http-server /Users/userName/project_stuff/RecordQue
+
+open server URL from terminal to browser appending with "/demo.html"
+Eg: http://192.168.0.101:8080/demo.html
+
+```
 
 # Feature Grid Modal
 Visual representation for recordQue configurations of different stream sources
