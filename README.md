@@ -1,5 +1,30 @@
+This Demo consist of 2 reusable components:
+
+# Feature Grid Modal
+Visual representation for recordQue configurations of different stream sources
+
+![](docs/featureGridModal.png)
+
+```html
+
+<link rel="stylesheet" type="text/css" href="recordQue.css">
+
+<div>
+  <feature-grid></feature-grid>
+</div>
+
+<script type="text/javascript" src="./src/constants/feature-grid-constant.js"></script>
+<script type="text/javascript" src="featureGrid.js"></script>
+
+```
+```javascript
+
+var app = angular.module('AppName', ['ngFeatureGrid']);
+
+```
+
 # RecordQue
-a visual design language for borders to represent categories and values and reduce/expand ot an icon representation 
+a visual design language for borders to represent categories and values and reduce/expand ot an icon representation
 
 ![](docs/example.png)
 
