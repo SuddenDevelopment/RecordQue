@@ -5,7 +5,7 @@ angular.module("ngFeatureGrid", []).directive('featureGrid', function() {
             arrShapes = $scope.arrShapes = featureGridConstant.shapes,
             arrMods = $scope.arrMods = featureGridConstant.mods,
             arrColors = $scope.arrColors = featureGridConstant.colors,
-            featureGridObj;
+            featureGridObj, recordQueRulesObj = [];
 
         initialize();
 
@@ -18,54 +18,31 @@ angular.module("ngFeatureGrid", []).directive('featureGrid', function() {
                 sw: [],
                 se: []
             };
-
-            $scope.arrRows = [];
-            for (var i = 0; i < 12; i++) {
-                var arrColumn = [];
-                for (var ii = 0; ii < 9; ii++) {
-                    arrColumn.push({
-                        nw: fnRandomClasses(),
-                        ne: fnRandomClasses(),
-                        sw: fnRandomClasses(),
-                        se: fnRandomClasses(),
-                        c: fnRandomElement(arrIcons)
-                    });
-                    arrColumn[ii].nw.push(arrColors[ii]);
-                    arrColumn[ii].ne.push(arrColors[ii]);
-                    arrColumn[ii].sw.push(arrColors[ii]);
-                    arrColumn[ii].se.push(arrColors[ii]);
-                }
-                $scope.arrRows.push(arrColumn);
-            }
+            $scope.$on("SHOW_RECORDQUE_RULES", function(event, data) {
+              recordQueRulesObj = data;
+              normalizeRecordQueData(angular.copy(data));
+            });
         }
 
-        function fnRandomElement(arr) {
-            return arr[Math.floor(Math.random() * arr.length)];
+        function normalizeRecordQueData(data){
+          //TODO Normalise Data;
         }
-
-        function fnRandomClasses() {
-            var arrClasses = [];
-            arrClasses.push(fnRandomElement(arrShapes));
-            arrClasses.push(fnRandomElement(arrMods));
-            //arrClasses.push(fnRandomElement(arrColors));
-            return arrClasses;
-        }
-
-        $scope.fnRecordQueExample = function(objIn) {
-            var objOut = {};
-            objOut[$scope.region] = [objIn.shape, objIn.mod, objIn.color];
-            return objOut;
-        };
 
         $scope.fnAddRecordQueRule = function() {
             console.log(featureGridObj.shape, featureGridObj.color);
-            featureGridObj.recordQue[featureGridObj.region].push({
+            var recordQueRuleData = {
                 'region': featureGridObj.region,
                 'path': featureGridObj.path,
                 'value': featureGridObj.value,
                 'op': featureGridObj.op,
                 'class': [featureGridObj.shape, featureGridObj.color].join(' ')
-            });
+            }
+            featureGridObj.recordQue[featureGridObj.region].push(recordQueRuleData);
+            recordQueRulesObj.push(recordQueRuleData);
+        };
+
+        $scope.fnSaveRecordQueRules = function() {
+            $scope.$emit("SAVE_RECORDQUE_RULES", recordQueRulesObj);
         }
     }];
 
@@ -73,7 +50,13 @@ angular.module("ngFeatureGrid", []).directive('featureGrid', function() {
     return {
         restrict: 'E',
         replace: true,
-        templateUrl: './featureGrid.htm',
+        templateUrl: function(element, attrs) {
+            if (attrs.isDemo) {
+                return './featureGrid.htm';
+            } else {
+                return "../node_modules/RecordQue/featureGrid.htm";
+            }
+        },
         controller: controller
     };
 });

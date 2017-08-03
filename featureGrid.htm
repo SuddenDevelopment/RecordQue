@@ -97,17 +97,18 @@
                         <input ng-model="icon">
                     </md-input-container>
                 </div>
-                <md-button class="md-raised" ng-click="fnAddRecordQueRule()">Apply</md-button>
+                <md-button class="md-raised" ng-click="fnAddRecordQueRule()">Add Rule</md-button>
+                <md-button class="md-raised" ng-click="fnSaveRecordQueRules()">Apply</md-button>
             </div>
         </div>
     </div>
-    <table>
+    <!-- <table>
         <tr ng-repeat="row in arrRows track by $index">
             <td ng-repeat="col in row">
                 <record-que d="col"></record-que>
             </td>
         </tr>
-    </table>
+    </table> -->
     <!--
 <div layout="row" layout-align="left center">
   <div class="label">Anthony Aragues<br/>aaragues@ohm.ai</div>

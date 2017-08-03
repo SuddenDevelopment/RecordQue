@@ -35,6 +35,16 @@ Visual representation for recordQue configurations of different stream sources
 
 var app = angular.module('AppName', ['ngFeatureGrid']);
 
+Events used to send and receive data are:
+
+Send Data to this directive:
+$rootScope.$broadcast("SHOW_RECORDQUE_RULES", recordQueDataArray);
+
+Receive Data from this directive:
+$rootScope.$on("SAVE_RECORDQUE_RULES",function (event, recordQueDataArray) {
+  //DO your stuff here
+});
+
 ```
 
 # RecordQue
