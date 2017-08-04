@@ -5,7 +5,8 @@ angular.module("ngFeatureGrid", []).directive('featureGrid', function() {
             arrShapes = $scope.arrShapes = featureGridConstant.shapes,
             arrMods = $scope.arrMods = featureGridConstant.mods,
             arrColors = $scope.arrColors = featureGridConstant.colors,
-            featureGridObj, recordQueRulesObj = [];
+            featureGridObj, recordQueRulesObj = [],
+            showRecordEventListner;
 
         initialize();
 
@@ -18,14 +19,23 @@ angular.module("ngFeatureGrid", []).directive('featureGrid', function() {
                 sw: [],
                 se: []
             };
-            $scope.$on("SHOW_RECORDQUE_RULES", function(event, data) {
-              recordQueRulesObj = data;
-              normalizeRecordQueData(angular.copy(data));
+            showRecordEventListner = $scope.$on("SHOW_RECORDQUE_RULES", function(event, data) {
+                recordQueRulesObj = data;
+                normalizeRecordQueData(angular.copy(data));
+            });
+            $scope.$on('$destroy', function() {
+                removeAllListners();
             });
         }
 
-        function normalizeRecordQueData(data){
-          //TODO Normalise Data;
+        function normalizeRecordQueData(data) {
+            angular.forEach(data, function(value, index) {
+                featureGridObj.recordQue[value.region].push(value);
+            });
+        }
+
+        function removeAllListners() {
+            showRecordEventListner();
         }
 
         $scope.fnAddRecordQueRule = function() {
@@ -43,6 +53,7 @@ angular.module("ngFeatureGrid", []).directive('featureGrid', function() {
 
         $scope.fnSaveRecordQueRules = function() {
             $scope.$emit("SAVE_RECORDQUE_RULES", recordQueRulesObj);
+            removeAllListners();
         }
     }];
 

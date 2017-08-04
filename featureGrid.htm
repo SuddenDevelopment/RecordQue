@@ -6,18 +6,18 @@
             <!--====##|| EXISTING RULES ||##====-->
             <div layout="row">
                 <div flex="20"> Quad </div>
-                <div flex="20"> Path </div>
+                <div flex="15"> Path </div>
                 <div flex="20"> Comparison </div>
-                <div flex="20"> Value </div>
+                <div flex="25"> Value </div>
                 <div flex="20"> Preview </div>
             </div>
             <section ng-repeat="(kRegion,arrRules) in tmp.recordQue">
                 <div ng-repeat="(kRule,rule) in arrRules" layout="row" flex>
                     <div ng-click="tmp.recordQue[kRegion].splice(kRule,1)" flex="5">X</div>
-                    <div flex="20"> {{rule.region}} </div>
-                    <div flex="20"> {{rule.path}} </div>
+                    <div flex="15"> {{rule.region}} </div>
+                    <div flex="15"> {{rule.path}} </div>
                     <div flex="20"> {{rule.op}} </div>
-                    <div flex="20"> {{rule.value}} </div>
+                    <div flex="25"> {{rule.value}} </div>
                     <div class="recordQue mini">
                         <table>
                             <tr>
