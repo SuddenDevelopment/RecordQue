@@ -11,8 +11,8 @@
       .white{ background-color: #fff; }
 
 /*----=====|| DEFAULTS ||====----*/
-html, body{background-color: #1d1f21; height:100%; width:100%; margin:0;padding:0; color:#fff;}
-div.recordQue{height:44px;width:44px;overflow:hidden;display:inline-block;} 
+html, body{background-color: #1d1f21; height:100%; width:100%; margin:0;padding:5px; color:#fff;}
+div.recordQue{height:44px;width:44px;overflow:hidden;display:inline-block;}
 .recordQue.mini{height:22px;width:22px;padding:5px;}
 #tmpRule{border:1px solid #666; padding:5px; margin-top:10px;}
 div.recordQue td{
@@ -30,7 +30,11 @@ div.recordQue tr{height:20px;}
 .recordQue .centerIcon{position:relative;  color:#fff; top:-32px; background:rgba(0,0,0,0.6); border-radius:20px; box-shadow: 0 0 5px #000;}
 .recordQue .iconContainer{width:44px;text-align:center;}
 
-/*----=====|| SHAPES ||====----*/    
+/*----=====|| SHAPES ||====----*/
+
+.modList {
+  display: inline;
+}
 
 .recordQue .null{
   width:20px;
