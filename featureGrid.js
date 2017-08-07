@@ -55,6 +55,15 @@ angular.module("ngFeatureGrid", []).directive('featureGrid', function() {
             $scope.$emit("SAVE_RECORDQUE_RULES", recordQueRulesObj);
             removeAllListners();
         }
+
+        $scope.removeRecorQueRule = function(kRegion, kRule){
+          $scope.tmp.recordQue[kRegion].splice(kRule,1);
+          recordQueRulesObj = [];
+          angular.forEach(featureGridObj.recordQue, function(recordList) {
+            if (recordList.length)
+              recordQueRulesObj = recordQueRulesObj.concat(recordList);
+          });
+        }
     }];
 
 
