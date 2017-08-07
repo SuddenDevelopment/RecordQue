@@ -13,7 +13,7 @@
             </div>
             <section ng-repeat="(kRegion,arrRules) in tmp.recordQue">
                 <div ng-repeat="(kRule,rule) in arrRules" layout="row" flex>
-                    <div ng-click="tmp.recordQue[kRegion].splice(kRule,1)" flex="5">X</div>
+                    <div ng-click="removeRecorQueRule(kRegion, kRule)" flex="5">X</div>
                     <div flex="15"> {{rule.region}} </div>
                     <div flex="15"> {{rule.path}} </div>
                     <div flex="20"> {{rule.op}} </div>
